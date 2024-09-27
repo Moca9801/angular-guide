@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/vars.scss';
+
+*{
+  font-family: var(--global-font-family);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden !important;
+}
+  
+body, html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: 'digitalGeometric';
+  src: url('./assets/fonts/digital\ geometric\ bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
