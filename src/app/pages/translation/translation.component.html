@@ -1,0 +1,25 @@
+<div class="content">
+    <div class="header">
+        <div class="info"><p>v1.0.0</p> </div>
+        <div class="title">{{ "HEADER_TITLE" |translate }}</div>
+        <div class="change-color ">
+            <button (click)="toggleTheme()">
+                <span class="material-icons fs-6 fw-lighter" style="margin-right: .5rem !important;">{{ isDarkTheme ? 'dark_mode' : 'light_mode' }}</span>
+            </button>
+            <button (click)="toggleLanguage()">
+                <span class="material-icons material-symbols-outlined fs-5 fw-lighter">{{ currentLang === 'en' ? 'language_us' : 'language_spanish' }}</span>
+            </button>
+        </div>    
+    </div>
+    <div class="body">
+        <div class="body-title">{{ "TITLE" | translate }}</div>
+        <div class="divider"></div>
+        <div class="body-sub">{{ "DESCRIPTION" | translate}}</div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-text fw-lighter">&copy; {{ currentYear }} |  <a target="_blank" href="https://mocadev.netlify.app/">mocadev</a>
+        </div>
+    </div>
+</div>
+
