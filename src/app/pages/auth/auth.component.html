@@ -1,0 +1,23 @@
+<div class="content">
+    <div class="header">
+        <div class="info"><p>v1.0.0</p> </div>
+        <div class="title">Auth</div>
+        <div class="change-color ">
+            <button (click)="toggleTheme()">
+                <span class="material-icons fs-6 fw-lighter" style="margin-right: .5rem !important;">{{ isDarkTheme ? 'dark_mode' : 'light_mode' }}</span>
+            </button>
+        </div>    
+    </div>
+    <div class="body">
+        <p class="credentials-info">email &rarr; test&commat;email.com, <br>password &rarr; 123456789</p>
+        <input [(ngModel)]="email" type="email" name="text" class="input" placeholder="Email"/>
+        <input [(ngModel)]="password" type="password" name="text" class="input" placeholder="Password"  />
+        <button (click)="login()" class="button-confirm">Let`s go →</button>
+        <button (click)="logout()" class="button-logout">Logout →</button>
+
+    </div>
+    <div class="footer">
+        <div class="footer-text fw-lighter">&copy; {{ currentYear }} |  <a target="_blank" href="https://mocadev.netlify.app/">mocadev</a>
+        </div>
+    </div>
+</div>
