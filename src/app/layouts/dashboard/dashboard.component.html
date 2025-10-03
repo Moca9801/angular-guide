@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="info"><p>v1.0.0</p> </div>
+  <div class="title">Dashboard</div>
+  <div class="change-color ">
+      <button (click)="toggleTheme()" class="toggleTheme">
+          <span class="material-icons fs-6 fw-lighter" style="margin-right: .5rem !important;">{{ isDarkTheme ? 'dark_mode' : 'light_mode' }}</span>
+      </button>
+  </div>    
+</div>
+
+<div class="body">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="button-container">
+  @for(btn of buttons; track btn.label) {
+    <button class="button" (click)="navigate(btn.route)">
+      {{btn.label}}
+    </button>
+  }
+</div>
+
+

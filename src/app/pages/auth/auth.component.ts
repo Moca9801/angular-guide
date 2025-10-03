@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -18,6 +19,7 @@ export class AuthComponent {
 
   constructor(
     private themeService: ThemeService,
+    private route: Router
   ){}
   
   toggleTheme() {
@@ -37,6 +39,8 @@ export class AuthComponent {
         localStorage.setItem("angular_guide_token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30")
       }
       alert('Login successful, token saved in localStorage');
+      this.route.navigate(['/dashboard']);
+      
     }else{
       alert('Wrong credentials');
     }
