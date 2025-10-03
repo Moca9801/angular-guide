@@ -6,6 +6,7 @@ import { OneComponent } from './pages/dashboard/one/one.component';
 import { TwoComponent } from './pages/dashboard/two/two.component';
 import { ThreeComponent } from './pages/dashboard/three/three.component';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
     { path: 'themeColor', component: ThemeColorComponent },
@@ -18,9 +19,9 @@ export const routes: Routes = [
             { path: '', component: OneComponent },
             { path: 'two', component: TwoComponent },
             { path: 'three', component: ThreeComponent },
-
-
         ] 
     },
+    { path: '**', component: NotFoundComponent },
+
 
 ];

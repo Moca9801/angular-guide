@@ -1,0 +1,126 @@
+/* From Uiverse.io by akshat-patel28 */ 
+.button-container {
+  /* PROPIEDADES CORREGIDAS PARA POSICIONAMIENTO FIJO y compatibilidad móvil */
+  position: fixed; /* Anclado a la ventana (viewport) */
+  bottom: 20px;    /* 20px desde el borde inferior */
+  left: 50%;       /* Centrado horizontalmente */
+  transform: translateX(-50%); /* Ajuste para centrar perfectamente */
+  z-index: 1000;   /* Asegura que flote sobre todo (resuelve problema de solapamiento) */
+  
+  display: flex;
+  background-color: var(--secondary-color); 
+  width: 30rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  color: var(--text-color);
+  
+    box-shadow:
+    inset 0px 0px 8rem var(--accent-color),
+    inset 0px 0px 8rem var(--primary-color),
+    0px 0px 8rem var(--primary-color),
+    0px 0px 8rem var(--accent-color);
+}
+
+.button-container:hover {
+  box-shadow:
+    inset 0px 0px 10rem var(--accent-color),
+    inset 0px 0px 10rem var(--primary-color),
+    0px 0px 10rem var(--primary-color),
+    0px 0px 10rem var(--accent-color);
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-color);
+  font-weight: bold;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.info{
+    display: flex;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.title{
+    font-weight: lighter;
+    font-size: medium;
+}
+
+.change-color{
+    display: flex;
+}
+
+.toggleTheme{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 8rem 0 8rem 0;
+}
+
+
+@media (max-width: 500px) {
+    .body{
+        border-left: .2rem solid var(--secondary-color);
+    }
+    .body-title{
+        font-size: 3rem;
+    }
+    .body-sub{
+        font-size: 1rem;
+    }
+
+    .divider{
+        width: 70%;
+        margin-top: .2rem;
+    }
+}
+
+@media (max-height: 500px) {
+    .body{
+        padding: 0 0 4rem 0;
+    }
+}
